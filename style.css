@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+#info {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    z-index: 10;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 50, 150, 0.8);
+}
+
+#romanticTitle {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd6e8;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 102, 153, 0.9);
+    z-index: 20;
+    pointer-events: none;
+}
+
+#musicControls {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 100;
+}
+
+#musicLinkInput {
+    min-width: 280px;
+    padding: 12px 14px;
+    border: 2px solid rgba(255, 50, 150, 0.6);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    outline: none;
+    backdrop-filter: blur(5px);
+}
+
+#musicLinkInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#applyMusicBtn,
+#musicBtn {
+    padding: 12px 20px;
+    background: rgba(255, 50, 150, 0.2);
+    border: 2px solid rgba(255, 50, 150, 0.6);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#applyMusicBtn:hover,
+#musicBtn:hover {
+    background: rgba(255, 50, 150, 0.5);
+    transform: scale(1.05);
+}
+
+#ytPlayer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0.01;
+    z-index: -1;
+    border: none;
+    pointer-events: none;
+}
